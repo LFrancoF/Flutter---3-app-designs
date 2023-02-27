@@ -22,7 +22,7 @@ class ScrollScreen extends StatelessWidget {
       body: Container(
         decoration: boxDecoration,
         child: PageView(
-          physics: const BouncingScrollPhysics(), //omportamiento del scroll de IOS
+          physics: const BouncingScrollPhysics(), //comportamiento del scroll de IOS
           scrollDirection: Axis.vertical,
           children: const[
             Page1(),
@@ -78,7 +78,7 @@ class MainContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const textStyle = TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white);
-    return SafeArea( //para que el child no ocupe las partes de la camara frontal de la pantalla o salida de audio, etc
+    return SafeArea( //para que el child no ocupe el espacio del statusbar (los iconos superiores de la pantalla como hora, bateria, espacio de la camara frontal, etc)
       bottom: false,  //evita que proteja la parte de abajo, o lo ignora
       child: Container(
         margin: const EdgeInsets.only(top: 50),
